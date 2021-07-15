@@ -11,10 +11,10 @@ class SystemHealth:
 
 counter = 1
 
-while counter < 10:
+"""while counter < 10:
     print(psutil.cpu_percent())
     time.sleep(1)
-    counter += 1
+    counter += 1"""
 """
 0.0
 13.3
@@ -27,9 +27,10 @@ while counter < 10:
 8.6
 """
 
-counter = 1
 
-while counter < 100:
-    print(psutil.virtual_memory().percent)
-    time.sleep(1)
-    counter += 1
+
+
+ram = psutil.virtual_memory()
+print(type(ram))
+print(type(ram.percent))
+
